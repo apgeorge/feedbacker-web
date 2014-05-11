@@ -37,7 +37,7 @@ module.exports = function (grunt) {
                 tasks: ['coffee:test']
             },
             compass: {
-                files: ['<%= yeoman.app %>**/*.{scss,sass}'],
+                files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
                 tasks: ['compass:server']
             },
             livereload: {
@@ -45,8 +45,8 @@ module.exports = function (grunt) {
                     livereload: LIVERELOAD_PORT
                 },
                 files: [
-                    '<%= yeoman.app %>/*.html',
-                    '{.tmp,<%= yeoman.app %>}/styles/{,*/}*.css',
+                    '<%= yeoman.app %>/{,*/}*.html',
+                    '.tmp/styles/{,*/}*.css',
                     '{.tmp,<%= yeoman.app %>}/scripts/{,*/}*.js',
                     '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
                 ]
@@ -225,16 +225,23 @@ module.exports = function (grunt) {
                 imagesDir: '<%= yeoman.app %>/images',
                 javascriptsDir: '<%= yeoman.app %>/scripts',
                 /*fontsDir: '<%= yeoman.app %>/styles/fonts',*/
-                importPath: '<%= yeoman.app %>/bower_components',
+                importPath: '<%= yeoman.app %>/bower_components/foundation/scss',
                 httpImagesPath: '/images',
                 httpGeneratedImagesPath: '/images/generated',
                 httpFontsPath: '/styles/fonts',
-                relativeAssets: false
+                relativeAssets: false,
+                assetCacheBuster: false,
+                raw: 'Sass::Script::Number.precision = 10\n'
             },
-            dist: {},
+            dist: {
+                options: {
+                    generatedImagesDir: '<%= yeoman.dist %>/images/generated'
+                }
+            },
             server: {
                 options: {
-                    debugInfo: true
+                    debugInfo: true,
+                    sourcemap: true
                 }
             }
         },

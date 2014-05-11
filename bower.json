@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "dependencies": {
     "requirejs": "~2.1.4",
-    "foundation": "~4",
+    "foundation": "~5",
     "modernizr": "~2.8.1",
     "jquery": "~2.1.1"
   },
