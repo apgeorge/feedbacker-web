@@ -1,6 +1,6 @@
 /*global define */
-define([], function () {
+define(['angular'], function (angular) {
     'use strict';
 
-    return '\'Allo \'Allo!';
+    return angular.module('feedbacker',[]);
 });
