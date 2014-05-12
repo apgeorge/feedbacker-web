@@ -1,0 +1,17 @@
+{
+    "libs": [
+        "browser",
+        "underscore",
+        "ecma5"
+    ],
+    "plugins": {
+        "angular": {
+        },
+        "requirejs": {
+            "baseURL": "./app/scripts/",
+            "paths": {
+                "jquery" : "./app/bower_components/jquery/dist/jquery"
+            }
+        }
+    }
+}
