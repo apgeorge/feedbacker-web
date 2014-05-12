@@ -2,6 +2,7 @@
 require.config({
     paths: {
         jquery: '../bower_components/jquery/dist/jquery',
+        underscore: '../bower_components/underscore/underscore',
         angular: '../bower_components/angular/angular',
         // 'angular-resource': 'libraries/angular-resource'
     },
@@ -15,8 +16,9 @@ require.config({
     }
 });
 
-require([ 'angular', 'app'], function (angular,app) {
+require(['angular', 'underscore', 'app'], function(angular, _, app) {
     'use strict';
     angular.bootstrap(document, ['feedbacker']);
     console.log(app);
+    console.log(_);
 });
