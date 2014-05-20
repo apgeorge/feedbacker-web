@@ -45,14 +45,18 @@
         -->
        <!-- <link rel="stylesheet" href="css/normalize.css"> -->
        <!--  <link rel="stylesheet" href="css/main.css"> -->
-       <link rel="stylesheet" href="styles/main.css">
+       <!-- <link rel="stylesheet" href="styles/main.css"> -->
         <!-- build:js scripts/vendor/modernizr.js -->
-        <script src="bower_components/modernizr/modernizr.js"></script>
+        <!-- <script src="bower_components/modernizr/modernizr.js"></script> -->
         <!-- endbuild -->
 
         <!-- <1!-- build:css bower_components/foundation/css/foundation.css --1> -->
         <!-- <link rel="stylesheet" href="bower_components/foundation/scss/foundation.css"> -->
         <!-- <1!-- endbuild --1> -->
+
+        {{BASE_TAG}}
+
+        <link rel="stylesheet" href="assets/feedbacker-web.css">
 </head>
     <body>
     <div class="row">
@@ -223,10 +227,16 @@
         <script src="bower_components/json3/lib/json3.min.js"></script>
         <![endif]-->
 
-
+        <script>
+            window.ENV = {{ENV}};
+        </script>
+        <script src="assets/feedbacker-web.js"></script>
+        <script>
+            window.FeedbackerWeb = require('feedbacker-web/app')['default'].create(ENV.APP);
+        </script>
 
         <!-- build:js scripts/main.js -->
-        <script data-main="scripts/main" src="bower_components/requirejs/require.js"></script>
+        <!-- <script data-main="scripts/main" src="bower_components/requirejs/require.js"></script> -->
         <!-- endbuild -->
 
         <!-- <1!-- build:js scripts/async-local-storage.js --1> -->
