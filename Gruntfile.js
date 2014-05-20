@@ -446,6 +446,32 @@ module.exports = function (grunt) {
             all: {
                 rjsConfig: '<%= yeoman.app %>/scripts/main.js'
             }
+        },
+        manifest: {
+            generate: {
+                options: {
+                    basePath: './app/',
+                    cache: ['scripts/app.js', 'scripts/main.js','styles/main.css'],
+                    network: ['http://*', 'https://*'],
+                    fallback: ['/ /offline.html'],
+                    exclude: ['js/jquery.min.js'],
+                    preferOnline: false,
+                    verbose: true,
+                    timestamp: true,
+                    hash: false,
+                    master: ['index.html']
+                },
+                src: [
+                    // 'views/*.html',
+                    // 'scripts/*.js',
+                    // 'styles/*.css'
+                    'bower_components/requirejs/require.js',
+                    'bower_components/modernizr/modernizr.js',
+                    'bower_components/angular/angular.js',
+                    'bower_components/underscore/underscore.js',
+                ],
+                dest: 'app/manifest.appcache'
+            }
         }
     });
 
