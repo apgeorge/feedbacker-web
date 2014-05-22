@@ -1,7 +1,12 @@
-<div class="feedbacks personal">
+<div class="self talks">
+    <h1 class="">My Talks</h1>
+    <ul>
     {{#each}}
-        {{link-to 'topic'}}
+        <li class="talk">
+            {{#link-to 'talk' this}}
+            <h2 class=""> {{title}} </h2>
+            {{/link-to}}
+        </li>
     {{/each}}
-    
+    </ul>
 </div>
-

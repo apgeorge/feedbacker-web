@@ -1,5 +1,5 @@
 export default Ember.Route.extend({
     model: function () {
-        return ['a','b','c','d'];
+        return this.store.find('talk', { by: 1});
     }
 });

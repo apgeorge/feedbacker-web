@@ -3,6 +3,7 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+    this.resource('talk', { path: '/talk/:talk_id'});
 });
 
 export default Router;
