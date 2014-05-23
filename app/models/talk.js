@@ -12,7 +12,7 @@ Talk.reopenClass({
         description: 'A comparison of Ember Javascript MVC Framework with others' + 
         ' and how I came to choose Ember for building my application',
         by: 1,
-        events: []
+        events: [1,2,3]
     }, {
         id: 2,
         title: 'Why LXCs are the future of virtualization',
