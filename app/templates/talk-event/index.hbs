@@ -1,0 +1,17 @@
+<h2 class="h2">{{name}}</h2>
+
+<ul class="feedback">
+    {{#each feedbacks }}
+        <li>
+
+        {{#link-to 'feedback' this}} 
+            
+            <h3 class="">{{by.name}}</h3>
+            <p>{{shortSummary}}</p>
+            <p>{{date}}</p> 
+
+        {{/link-to}}
+
+        </li>
+    {{/each}}
+</ul>

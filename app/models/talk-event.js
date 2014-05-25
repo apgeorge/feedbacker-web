@@ -19,7 +19,7 @@ TalkEvent.reopenClass({
             date: '23rd June 2013',
             isTrialRun: true,
             audience: 'My friends in Pune office',
-            feedbacks: []
+            feedbacks: [1,2]
         }, {
             id: 2,
             name: 'Demo to friends',
@@ -29,7 +29,7 @@ TalkEvent.reopenClass({
             date: '14th June 2013',
             isTrialRun: true,
             audience: 'John Dale and Joe Dale',
-            feedbacks: []
+            feedbacks: [3,4]
         }, {
             id: 3,
             name: 'GeekNight',
@@ -39,7 +39,7 @@ TalkEvent.reopenClass({
             date: '30th June 2013',
             isTrialRun: false,
             audience: 'Attendees of the Geeknight event',
-            feedbacks: []
+            feedbacks: [5,6,7,8]
         },
 
     ]
