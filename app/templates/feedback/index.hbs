@@ -11,10 +11,18 @@
         <section class="feedback-pros">
             <h5 class="">Good</h5>
             <ul>
+                {{#each talkContent.pros}}
+                    {{text}}
+                {{/each}}
             </ul>
         </section>
         <section class="feedback-cons">
             <h5 class="">Can do better</h5>
+            <ul>
+                {{#each talkContent.cons}}
+                    {{text}}
+                {{/each}}
+            </ul>
         </section>
     </section>
 
@@ -22,13 +30,24 @@
         <h4 class="">Presentation</h4>
         <section class="feedback-pros">
             <h5 class="">Good</h5>
+            <ul>
+                {{#each presentation.pros}}
+                    {{text}}
+                {{/each}}
+            </ul>
         </section>
         <section class="feedback-cons">
             <h5 class="">Can do better</h5>
+            <ul>
+                {{#each presentation.cons}}
+                    {{text}}
+                {{/each}}
+            </ul>
         </section>
     </section>
 
     <section class="feedback-summary">
         <h4 class="">Summary</h4>
+        <p>{{summary}}<p>
     </section>
 </article>

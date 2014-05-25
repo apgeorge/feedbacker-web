@@ -18,6 +18,12 @@ User.reopenClass({
         name: 'John Dale',
         email: 'johndale@gmail.com',
         talks: []
+    }, {
+        id: 3,
+        userid: 'jane-dale',
+        name: 'Jane Dale',
+        email: 'janedale@gmail.com',
+        talks: []
     }]
 });
 
