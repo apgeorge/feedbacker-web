@@ -1,18 +1,31 @@
 <div class="container">
-    <div class="row header">
-        <div class="small-3 columns header__logo">
-            LOGO
-        </div>
-        <div class="small-6 columns header__title">
-            TITLE
-        </div>
-        <div class="small-3 columns header__menu">
-            MENU
-        </div>
-    </div>
-    <div class="row main">
-        <div class="small-12 columns content">
-            {{outlet}}
+    <div class="off-canvas-wrap" data-offcanvas>
+        <div class="inner-wrap">
+            <nav class="tab-bar">
+                <section class="left-small">
+                    <a class="left-off-canvas-toggle menu-icon"><span></span></a>
+                </section>
+                <section class="right tab-bar-section">
+                    <h1 class="title">Feedbacker</h1>
+                </section>
+            </nav>
+            <aside class="left-off-canvas-menu">
+                <ul class="menu off-canvas-list">
+                    <li>
+                        <label>Go!</label>
+                    </li>
+                    <li class="menu__item">{{#link-to 'index'}} Current Talks {{/link-to}}</li>
+                    <li class="menu__item">{{#link-to 'index'}} My Feedback {{/link-to}}</li>
+                    <li class="menu__item">{{#link-to 'index'}} My Talks {{/link-to}}</li>
+                </ul>
+            </aside>
+            <div class="row main">
+                <div class="small-12 columns content">
+                    {{outlet}}
+                </div>
+            </div>
+            <!-- CLOSE THE OFF-CANVAS MENU -->
+            <a class="exit-off-canvas"></a>
         </div>
     </div>
     <div class="row footer">
@@ -22,4 +35,3 @@
 
     </div>
 </div>
-
