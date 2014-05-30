@@ -451,8 +451,11 @@ module.exports = function (grunt) {
             generate: {
                 options: {
                     basePath: './app/',
-                    cache: ['scripts/app.js', 'scripts/main.js','styles/main.css'],
-                    network: ['http://*', 'https://*'],
+                    cache: [
+                    '/assets/feedbacker-web.css',
+                    '/assets/feedbacker-web.js',
+                    ],
+                    network: ['http://localhost:35729/livereload.js?snipver=1'],
                     fallback: ['/ /offline.html'],
                     exclude: ['js/jquery.min.js'],
                     preferOnline: false,
@@ -465,12 +468,10 @@ module.exports = function (grunt) {
                     // 'views/*.html',
                     // 'scripts/*.js',
                     // 'styles/*.css'
-                    'bower_components/requirejs/require.js',
-                    'bower_components/modernizr/modernizr.js',
-                    'bower_components/angular/angular.js',
-                    'bower_components/underscore/underscore.js',
+                    '/assets/feedbacker-web.css',
+                    '/assets/feedbacker-web.js',
                 ],
-                dest: 'app/manifest.appcache'
+                dest: 'public/manifest.appcache'
             }
         }
     });
