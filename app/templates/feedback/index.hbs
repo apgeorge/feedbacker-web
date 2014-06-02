@@ -12,7 +12,7 @@
             <h5 class="">Good</h5>
             <ul>
                 {{#each talkContent.pros}}
-                    {{text}}
+                <li>{{#link-to 'feedback-item' this}} {{ text }} {{/link-to}}</li>
                 {{/each}}
             </ul>
         </section>
@@ -20,7 +20,7 @@
             <h5 class="">Can do better</h5>
             <ul>
                 {{#each talkContent.cons}}
-                    {{text}}
+                <li>{{#link-to 'feedback-item' this}} {{ text }} {{/link-to}}</li>
                 {{/each}}
             </ul>
         </section>
@@ -32,7 +32,7 @@
             <h5 class="">Good</h5>
             <ul>
                 {{#each presentation.pros}}
-                    {{text}}
+                <li>{{#link-to 'feedback-item' this}} {{ text }} {{/link-to}}</li>
                 {{/each}}
             </ul>
         </section>
@@ -40,7 +40,7 @@
             <h5 class="">Can do better</h5>
             <ul>
                 {{#each presentation.cons}}
-                    {{text}}
+                <li>{{#link-to 'feedback-item' this}} {{ text }} {{/link-to}}</li>
                 {{/each}}
             </ul>
         </section>
@@ -48,6 +48,7 @@
 
     <section class="feedback-summary">
         <h4 class="">Summary</h4>
-        <p>{{summary}}<p>
+        <p>{{summary}}
+            <p>
     </section>
 </article>
