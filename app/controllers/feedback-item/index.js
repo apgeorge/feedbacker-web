@@ -1,12 +1,13 @@
 var FeedbackItemIndexController = Ember.ObjectController.extend({
+    actions: {
+        nextItem: function () {
+            window.alert('next');
+        },
+        previousItem: function () {
+            window.alert('previous');
+        },
+    }
 
-    next: function() {
-        return 2;
-    }.property(),
-
-    previous: function() {
-        return 1;
-    }.property(),
 });
 
 export default FeedbackItemIndexController;
