@@ -4,7 +4,7 @@ var FeedbackItemIndexView = Ember.View.extend({
         console.log('_onDidInsertElement ');
         console.log(this.get('element'));
         var view = this;
-        h.on("swipe", function(ev) {
+        h.on("swipe drag", function(ev) {
             if (ev.gesture.direction === 'right') {
                 view.get('controller').send('previousItem');
             } else {
@@ -12,6 +12,7 @@ var FeedbackItemIndexView = Ember.View.extend({
             }
             return true;
         });
+        this.$('.slide-in-left').css('left','0');
         return this._super(Array.prototype.slice.call(arguments));
     }),
 });
