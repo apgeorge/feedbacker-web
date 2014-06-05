@@ -39,4 +39,13 @@ app.import('vendor/ic-ajax/dist/named-amd/main.js', {
 });
 
 
-module.exports = app.toTree();
+
+var tree = app.toTree();
+
+// Autoprefixer CSS post processing
+var autoprefixer = require('broccoli-autoprefixer');
+// tree = autoprefixer(tree, options);
+tree = autoprefixer(tree);
+
+module.exports = tree;
+

@@ -57,6 +57,8 @@
     "grunt-autoshot": "~0.2.0",
     "grunt-responsive-images": "~0.0.3",
     "grunt-manifest": "",
-    "broccoli-sass": "^0.1.4"
+    "broccoli-sass": "^0.1.4",
+    "autoprefixer": "latest",
+    "broccoli-autoprefixer": "latest"
   }
 }
