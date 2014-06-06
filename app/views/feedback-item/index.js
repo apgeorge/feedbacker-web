@@ -4,17 +4,26 @@ var FeedbackItemIndexView = Ember.View.extend({
         console.log('_onDidInsertElement ');
         console.log(this.get('element'));
         var view = this;
-        h.on("swipe drag", function(ev) {
-            if (ev.gesture.direction === 'right') {
-                view.get('controller').send('previousItem');
-            } else {
-                view.get('controller').send('nextItem');
-            }
-            return true;
+        h.on("swipeleft dragleft", function(ev) {
+            view.get('controller').send('previousItem');
+            return false;
         });
-        this.$('.slide-in-left').css('left','0');
+        h.on("swiperight dragright", function(ev) {
+            view.get('controller').send('nextItem');
+            return false;
+        });
         return this._super(Array.prototype.slice.call(arguments));
     }),
+    didInsertElement: function(){
+        this.$('.slider').addClass('slide-in-left-done');
+        console.log('didInsertElement...');
+    },
+    willClearRender: function(){
+        console.log('willClearRender');
+    },
+    willDestroyElement: function () {
+        console.log('willDestroyElement');
+    },
 });
 
 export default FeedbackItemIndexView;

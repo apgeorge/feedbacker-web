@@ -1,6 +1,7 @@
-<div class="slide-in-left">
+<div class="slider slide-in-left">
 <p class="feedback__item__text">{{text}}</p>
 
+{{#link-to 'feedback' this.feedbackSection.feedback class="button"}} Back {{/link-to}}
 <button {{action "nextItem"}}>Next</button>
 <button {{action "previousItem"}}>Previous</button>
 </div>
