@@ -14,15 +14,31 @@ var FeedbackItemIndexView = Ember.View.extend({
         });
         return this._super(Array.prototype.slice.call(arguments));
     }),
-    didInsertElement: function(){
-        this.$('.slider').addClass('slide-in-left-done');
+    didInsertElement: function() {
         console.log('didInsertElement...');
     },
-    willClearRender: function(){
+    willClearRender: function() {
         console.log('willClearRender');
     },
-    willDestroyElement: function () {
+    willDestroyElement: function() {
         console.log('willDestroyElement');
+    },
+    animateIn: function(done) {
+        console.log('animateIn');
+        this.$('.slider').addClass('slide-in-left-done');
+        done();
+    },
+    willAnimateIn: function() {
+        console.log('willAnimateIn');
+        // this.$('.slider').addClass('slide-in-left');
+    },
+    animateOut: function(done) {
+        console.log('animateOut');
+        this.$('.slider').removeClass('slide-in-left-done');
+        this.$('.slider').one('webkitTransitionEnd', function () {
+            console.log('transition end');
+            done();
+        });
     },
 });
 
