@@ -24,21 +24,16 @@ var FeedbackItemIndexView = Ember.View.extend({
         console.log('willDestroyElement');
     },
     animateIn: function(done) {
-        console.log('animateIn');
-        this.$('.slider').addClass('slide-in-left-done');
-        done();
+        console.log('F:animateIn');
+        this.$().fadeTo(250, 1, done);
     },
     willAnimateIn: function() {
-        console.log('willAnimateIn');
-        // this.$('.slider').addClass('slide-in-left');
+        console.log('F:willAnimateIn');
+        this.$().css("opacity", 0);
     },
     animateOut: function(done) {
-        console.log('animateOut');
-        this.$('.slider').removeClass('slide-in-left-done');
-        this.$('.slider').one('webkitTransitionEnd', function () {
-            console.log('transition end');
-            done();
-        });
+        console.log('F:animateOut');
+        this.$().fadeTo(250, 0, done);
     },
 });
 

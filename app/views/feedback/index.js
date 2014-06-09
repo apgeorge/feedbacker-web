@@ -10,7 +10,7 @@ var FeedbackIndexView = Ember.View.extend({
     },
     animateIn: function(done) {
         console.log('F:animateIn');
-        this.$().fadeTo(500, 1, done);
+        this.$().fadeTo(250, 1, done);
     },
     willAnimateIn: function() {
         console.log('F:willAnimateIn');
@@ -18,7 +18,7 @@ var FeedbackIndexView = Ember.View.extend({
     },
     animateOut: function(done) {
         console.log('F:animateOut');
-        this.$().fadeTo(500, 0, done);
+        this.$().fadeTo(250, 0, done);
     },
 });
 
