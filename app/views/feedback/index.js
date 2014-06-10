@@ -14,11 +14,19 @@ var FeedbackIndexView = Ember.View.extend({
     },
     willAnimateIn: function() {
         console.log('F:willAnimateIn');
-        this.$().css("opacity", 0);
+        this.$().css('opacity', 0);
     },
     animateOut: function(done) {
         console.log('F:animateOut');
         this.$().fadeTo(250, 0, done);
+    },
+    dragLeft: function(ev) {
+        console.log('FIV:dragleft');
+        ev.originalEvent.gesture.stopDetect();
+    },
+    dragRight: function(ev) {
+        console.log('FIV:dragright');
+        ev.originalEvent.gesture.stopDetect();
     },
 });
 

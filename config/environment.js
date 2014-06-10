@@ -11,7 +11,19 @@ module.exports = function(environment) {
 
     APP: {
       // Here you can pass flags/options to your application instance
-      // when it is created
+        // when it is created
+        customEvents: {
+            swipeleft: 'swipeLeft',
+            swiperight: 'swipeRight',
+            // // swipeLeftTwoFinger: 'swipeLeftTwoFinger',
+            // // wipeRightTwoFinger: 'swipeRightTwoFinger',
+            // dragDown: 'dragDown',
+            // dragUp: 'dragUp',
+            dragleft: 'dragLeft',
+            dragright: 'dragRight'
+            // dragDownTwoFinger: 'dragDownTwoFinger',
+            // dragUpTwoFinger: 'dragUpTwoFinger'
+        }
     }
   };
 

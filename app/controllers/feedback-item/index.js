@@ -1,10 +1,10 @@
 var FeedbackItemIndexController = Ember.ObjectController.extend({
     actions: {
         nextItem: function () {
-            window.alert('next');
+            console.log('controller:next');
         },
         previousItem: function () {
-            window.alert('previous');
+            console.log('controller:previous');
         },
     }
 
