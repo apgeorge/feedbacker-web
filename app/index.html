@@ -88,11 +88,13 @@
         <![endif]-->
 
     <script>
-        window.ENV = {{ENV}};
+      window.FeedbackerWebENV = {{ENV}};
+      window.EmberENV = window.FeedbackerWebENV.EmberENV;
     </script>
+    <script src="assets/vendor.js"></script>
     <script src="assets/feedbacker-web.js"></script>
     <script>
-        window.FeedbackerWeb = require('feedbacker-web/app')['default'].create(ENV.APP);
+      window.FeedbackerWeb = require('feedbacker-web/app')['default'].create(FeedbackerWebENV.APP);
     </script>
     <!-- Initialize the foundation components -->
     <script>
@@ -120,6 +122,6 @@
     <!-- <1!-- mobile helpers from html5 mobile boilerplate --1> -->
     <!-- <script src="scripts/helper.js"></script> -->
 
-</body>
 
+  </body>
 </html>
